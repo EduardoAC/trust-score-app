@@ -3,7 +3,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "_variables.scss";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-@import "_bootswatch.scss";
 // endbower
 
 .navbar{
@@ -26,7 +25,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
     transition: all 0.5s ease-out;
 }
 .score.fullscreen{
-    height: 455px;
+    min-height: 455px;
     position: relative;
 }
 .score.fullscreen > .total-score{
@@ -50,22 +49,23 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 .score-source-list{
     text-decoration: none;
-    font-size: 36px;
+    font-size: 20px;
     padding: 0;
-    margin: 0;
+    margin: 0; 
     
-    > li{
+    > sp-score{
         display: block;
-        padding: 15px 15px;
+        padding: 15px;
         border-bottom: 1px solid $gray-light;
     }
-    > li:last-child{
+    > sp-score:last-child{
         border-bottom :0;
     }
-}
-.score-source-list{
-    li:first-child{
+    p{
         text-align: center;
+    }
+    p:first-child{
+        font-size: 36px;
     }
     .underline{
         margin-left: 0;
@@ -78,9 +78,56 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
         font-size: 20px;
         span{
             display: inline-block;
-            margin-top: 10px;
+            margin-top: 6px;
         }
     }
+}
+.new-account{
+  height:455px;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 10px,
+    rgba(0, 0, 0, 0.3) 10px,
+    rgba(0, 0, 0, 0.3) 20px
+  );
+}
+.vertical-align{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 175px;
+    margin: auto;
+    display: block;
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+.btn-add-account{
+    height: 80px;
+    width: 80px;
+    font-size: 42px;
+    
+}
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
 }
 /*.browsehappy {
   margin: 0.2em 0;
@@ -163,6 +210,15 @@ body {
     border-bottom: 0;
   }
 }*/
+// Responsive: Portrait tablets and up 
+@media screen and (min-width: 768px) {
+    .score-source-list{
+        font-size: 36px;
+    }
+    .progress .progress-bar span{
+        margin-top: 10px;
+    }
+}
 // Custom page footer 
 .footer {
   padding-top: 19px;

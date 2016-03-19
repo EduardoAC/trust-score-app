@@ -1,0 +1,11 @@
+<p>{{scoreInfo.name}}</p>
+<div class="progress">
+  <div class="progress-bar progress-bar-success" style="width: {{scoreInfo.buying_percent}}%">
+    <span>{{scoreInfo.buying_percent}}% Buying</span>
+  </div>
+  <div class="progress-bar progress-bar-info progress-bar-striped" style="width: {{scoreInfo.selling_percent}}%">
+    <span>{{scoreInfo.selling_percent}}% Selling</span>
+  </div>
+</div>
+<p>Total score <strong>{{scoreInfo.total_score}}</strong><span class="underline">/{{scoreInfo.max_score}}</span></p>
+<p>Review numbers <strong class="text-success">{{scoreInfo.positive_reviews}}+</strong> / <strong class="text-danger">{{scoreInfo.negative_reviews}}-</strong></p>
