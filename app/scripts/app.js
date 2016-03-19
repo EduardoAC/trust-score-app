@@ -35,14 +35,26 @@ angular
         controllerAs: 'addAccount'
       })
       .when('/login', {
+        url: '/login',
         templateUrl: 'views/login.html',
-        controller: 'LoginCtrl',
-        controllerAs: 'login'
+        controller: 'AuthCtrl',
+        controllerAs: 'login',
+        onEnter: ['$state', 'auth', function($state, auth){
+          if(auth.isLoggedIn()){
+            $state.go('home');
+          }
+        }]
       })
       .when('/register', {
+        url: '/register',
         templateUrl: 'views/register.html',
         controller: 'RegisterCtrl',
-        controllerAs: 'register'
+        controllerAs: 'register',
+        onEnter: ['$state', 'auth', function($state, auth){
+          if(auth.isLoggedIn()){
+            $state.go('home');
+          }
+        }]
       })
       .otherwise({
         redirectTo: '/'

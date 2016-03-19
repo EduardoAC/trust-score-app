@@ -8,6 +8,8 @@
  * Controller of the trustScoreAppApp
  */
 angular.module('trustScoreAppApp')
-  .controller('RegisterCtrl', function () {
-
-  });
+.controller('RegisterCtrl', [
+'$scope',
+function ($scope) {
+  
+}]);
