@@ -129,6 +129,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   text-align: left;
   vertical-align: middle;
 }
+.login,.register{ 
+    padding: 15px;
+}
 /*.browsehappy {
   margin: 0.2em 0;
   background: #ccc;
