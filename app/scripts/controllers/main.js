@@ -8,10 +8,12 @@
  * Controller of the trustScoreAppApp
  */
 angular.module('trustScoreAppApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('MainCtrl', function ($scope) {
+    $scope.events = {};
+    $scope.events.moreDetails = function(event){
+        var parent = event.currentTarget.parentNode.parentNode;
+        parent.classList.remove("fullscreen");
+        document.getElementById("score-details").classList.remove("hidden");
+        
+    };
+});

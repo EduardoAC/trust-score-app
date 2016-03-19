@@ -1,23 +1,80 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
-
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div>
+<section class="row score fullscreen" id="total-score">
+    <div class="total-score">
+        <p>Daniel Smith</p>
+        <p>
+            <strong>97</strong>
+            <span class="underline">/100</span>
+            <span>Score</span>
+        </p>
+        <button type="button" ng-click="events.moreDetails($event)" class="more-details"><i class="glyphicon glyphicon-option-horizontal"></i></button>
+    </div>
+</section>
+<section class="row marketing hidden" id="score-details">
+    <ul class="score-source-list">
+        <li>
+            <p>Amazon</p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" style="width: 65%">
+                <span>65% Buying</span>
+              </div>
+              <div class="progress-bar progress-bar-info progress-bar-striped" style="width: 35%">
+                <span>35% Selling</span>
+              </div>
+            </div>
+            <p>Total score <strong>10</strong><span class="underline">/10</span></p>
+            <p>Review numbers <strong class="text-success">1050+</strong> / <strong class="text-danger">20-</strong></p>
+        </li>
+        <li>
+            <p>Ebay</p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" style="width: 100%">
+                <span>100% Buying</span>
+              </div>
+              <div class="progress-bar progress-bar-info progress-bar-striped" style="width: 0%">
+                <span>0% Selling</span>
+              </div>
+            </div>
+            <p>Total score <strong>9</strong><span class="underline">/10</span></p>
+            <p>Review numbers <strong class="text-success">10+</strong> / <strong class="text-danger">0-</strong></p>
+        </li>
+        <li>
+            <p>Uber</p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" style="width: 35%">
+                <span>35% Buying</span>
+              </div>
+              <div class="progress-bar progress-bar-info progress-bar-striped" style="width: 65%">
+                <span>65% Selling</span>
+              </div>
+            </div>
+            <p>Total score <strong>3</strong><span class="underline">/10</span></p>
+            <p>Review numbers <strong class="text-success">50+</strong> / <strong class="text-danger">1-</strong></p>
+        </li>
+        <li>
+            <p>AirBnB</p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" style="width: 65%">
+                <span>65% Buying</span>
+              </div>
+              <div class="progress-bar progress-bar-info progress-bar-striped" style="width: 35%">
+                <span>35% Selling</span>
+              </div>
+            </div>
+            <p>Total score <strong>10</strong><span class="underline">/10</span></p>
+            <p>Review numbers <strong class="text-success">1050+</strong> / <strong class="text-danger">20-</strong></p>
+        </li>
+        <li>
+            <p>Trusted Pilot</p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" style="width: 100%">
+                <span>100% Reviews given</span>
+              </div>
+              <div class="progress-bar progress-bar-info progress-bar-striped" style="width: 0%">
+                <span>0% Reviews receive</span>
+              </div>
+            </div>
+            <p>Total score <strong>5</strong><span class="underline">/10</span></p>
+            <p>Review numbers <strong class="text-success">250+</strong> / <strong class="text-danger">50-</strong></p>
+        </li>
+    </ul>
+</section>
