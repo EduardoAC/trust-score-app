@@ -10,4 +10,4 @@
 angular.module('trustScoreAppApp')
   .controller('LoginCtrl', function () {
 
-  });
+});

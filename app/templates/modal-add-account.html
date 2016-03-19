@@ -7,10 +7,12 @@
       </div>
       <div class="modal-body">
         <p>Add a new account to your profile</p>
+        <ul>
+            <li ng-repeat="data in platforms">{{data.name}}</li>
+        </ul>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
