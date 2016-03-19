@@ -39,9 +39,9 @@ angular
         templateUrl: 'views/login.html',
         controller: 'AuthCtrl',
         controllerAs: 'login',
-        onEnter: ['$state', 'auth', function($state, auth){
+        onEnter: ['$location', 'auth', function($location, auth){
           if(auth.isLoggedIn()){
-            $state.go('home');
+            $location.path('/');
           }
         }]
       })
@@ -50,9 +50,9 @@ angular
         templateUrl: 'views/register.html',
         controller: 'RegisterCtrl',
         controllerAs: 'register',
-        onEnter: ['$state', 'auth', function($state, auth){
+        onEnter: ['$location', 'auth', function($location, auth){
           if(auth.isLoggedIn()){
-            $state.go('home');
+            $location.path('/');
           }
         }]
       })

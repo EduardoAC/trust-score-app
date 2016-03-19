@@ -95,24 +95,24 @@ angular.module('trustScoreAppApp')
         templateUrl: 'templates/share-platform-score.html'
     };
 }).
-controller('AuthCtrl' [
+controller('AuthCtrl', [
 '$scope',
-'$state',
+'$location',
 'auth',
-function($scope, $state, auth){
+function($scope, $location, auth){
   $scope.user = {};
   $scope.register = function(){
     auth.register($scope.user).error(function(error){
       $scope.error = error;
     }).then(function(){
-      $state.go('home');
+      $location.path('/');
     });
   };
   $scope.logIn = function() {
     auth.logIn($scope.user).error(function(error){
       $scope.error = error;
     }).then(function(){
-      $state.go('home');
+      $location.path('/');
     });
   };
 }]);
