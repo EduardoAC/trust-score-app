@@ -34,7 +34,7 @@ angular.module('trustScoreAppApp')
     }
   };
   auth.register = function(user) {
-    return $http.post('http://localhost:9000/register', user).success(function(data){
+    return $http.post('http://localhost:3030/register', user).success(function(data){
       auth.saveToken(data.token);
     });
   };
@@ -59,6 +59,7 @@ angular.module('trustScoreAppApp')
             $scope.sharePlatformScoreList =[
                 {
                     name: "Amazon",
+                    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Amazon.com-Logo.svg/2000px-Amazon.com-Logo.svg.png",
                     buying_percent: 65,
                     selling_percent: 35,
                     total_score: 10,
@@ -68,6 +69,7 @@ angular.module('trustScoreAppApp')
                 },
                 {
                     name: "Ebay",
+                    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/EBay_logo.svg/1000px-EBay_logo.svg.png",
                     buying_percent: 100,
                     selling_percent: 0,
                     total_score: 4,
