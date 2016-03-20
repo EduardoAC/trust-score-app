@@ -24,9 +24,10 @@ angular.module('trustScoreAppApp')
                 }
             ];
             //This get is use to lead the platform information that will be use in the modal popup
-//            $http.get('http://localhost:3030/platforms').get(function(platforms){
-            $scope.platforms = platforms;
-//            });
+            $http.get('http://localhost:3030/platforms').then(function(platforms){
+                $scope.platforms = platforms;
+            });
+            
             $scope.events.addAccount = function () {
                 $("#model-add-account").modal({
                     keyboard: false
