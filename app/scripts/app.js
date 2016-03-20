@@ -38,7 +38,7 @@ angular
         url: '/login',
         templateUrl: 'views/login.html',
         controller: 'AuthCtrl',
-        controllerAs: 'login',
+        controllerAs: 'AuthCtrl',
         onEnter: ['$location', 'auth', function($location, auth){
           if(auth.isLoggedIn()){
             $location.path('/');
@@ -48,8 +48,8 @@ angular
       .when('/register', {
         url: '/register',
         templateUrl: 'views/register.html',
-        controller: 'RegisterCtrl',
-        controllerAs: 'register',
+        controller: 'AuthCtrl',
+        controllerAs: 'AuthCtrl',
         onEnter: ['$location', 'auth', function($location, auth){
           if(auth.isLoggedIn()){
             $location.path('/');

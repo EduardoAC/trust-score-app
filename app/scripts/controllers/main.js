@@ -34,7 +34,7 @@ angular.module('trustScoreAppApp')
     }
   };
   auth.register = function(user) {
-    return $http.post('/register', user).success(function(data){
+    return $http.post('http://localhost:9000/register', user).success(function(data){
       auth.saveToken(data.token);
     });
   };
@@ -102,6 +102,7 @@ controller('AuthCtrl', [
 function($scope, $location, auth){
   $scope.user = {};
   $scope.register = function(){
+    console.log("trying to register");
     auth.register($scope.user).error(function(error){
       $scope.error = error;
     }).then(function(){
@@ -109,6 +110,7 @@ function($scope, $location, auth){
     });
   };
   $scope.logIn = function() {
+    console.log("trying to login");
     auth.logIn($scope.user).error(function(error){
       $scope.error = error;
     }).then(function(){

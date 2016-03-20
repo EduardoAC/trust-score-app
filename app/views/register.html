@@ -1,6 +1,6 @@
 <div class="register">
     <h2>Register</h2>
-    <form name="form" ng-submit="vm.register()" role="form">
+    <form name="form" ng-submit="register()" role="form">
         <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
             <label for="username">Username</label>
             <input type="text" name="username" id="username" class="form-control" ng-model="vm.user.username" required />
