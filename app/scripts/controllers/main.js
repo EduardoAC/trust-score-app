@@ -59,6 +59,7 @@ angular.module('trustScoreAppApp')
             $scope.sharePlatformScoreList =[
                 {
                     name: "Amazon",
+                    img: "",
                     buying_percent: 65,
                     selling_percent: 35,
                     total_score: 10,

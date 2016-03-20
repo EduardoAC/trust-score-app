@@ -132,6 +132,42 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 .login,.register{ 
     padding: 15px;
 }
+.modal-dialog ul{
+    list-style: none;
+    padding: 0;
+}
+.amazon-button{
+    cursor: pointer;
+    display: inline-block;
+    font-size: 17px;
+    padding: 7px 42px;
+    margin: 0;
+    border-radius: 3px;
+    border: #b38b22 1px solid;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    background-color: #ffe8aa;
+    background: -webkit-linear-gradient(top, #ffe8aa 0%, #f5c646 100%);
+    background: linear-gradient(to bottom, #ffe8aa 0%, #f5c646 100%);
+    box-shadow: 1px 1px 2px 1px rgba(61,52,31,0.2);
+}
+.paypal-button{
+    color: #fff;
+    text-decoration: none;
+    background: #00509d;
+    background: -webkit-gradient(linear,left top,left bottom,from(#0079bc),to(#00509d));
+    background: -moz-linear-gradient(top,#0079bc,#00509d);
+    box-shadow: 1px 1px 2px 1px rgba(61, 52, 31, 0.2);
+    width: 100%;
+    margin-top: 20px;
+} 
+.text-success{
+    color: $brand-success;
+}
+.text-danger{
+    color: $brand-danger;
+}
 /*.browsehappy {
   margin: 0.2em 0;
   background: #ccc;

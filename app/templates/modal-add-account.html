@@ -7,8 +7,11 @@
       </div>
       <div class="modal-body">
         <p>Add a new account to your profile</p>
+        <div custom-directive="data"></div>
         <ul>
             <li ng-repeat="data in platforms">{{data.name}}</li>
+            <li><a class="amazon-button">Login with Amazon</a></li>
+            <li><a class="btn btn-primary paypal-button">Login with Paypal</a></li>
         </ul>
       </div>
       <div class="modal-footer">
